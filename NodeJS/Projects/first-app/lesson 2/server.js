@@ -9,6 +9,7 @@ const server = http.createServer((req,res)=>{
     const num  = _.random(0,20);
     console.log(num);
 
+    //only allow function to be called once
     const greet = _.once(()=>{
         console.log('hello');
     });
