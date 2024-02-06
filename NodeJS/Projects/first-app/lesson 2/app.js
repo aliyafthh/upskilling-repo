@@ -1,4 +1,5 @@
 const express = require('express');
+const morgan = require('morgan');
 
 //express app
 const app = express();
@@ -8,6 +9,32 @@ app.set('view engine', 'ejs');
 
 // listen for requests
 app.listen(3000);
+
+//Middleware
+/** 
+app.use((req,res,next)=>{
+    console.log('new request made:');
+    console.log('host: ', req.hostname);
+    console.log('path: ', req.path);
+    console.log('method: ', req.method);
+    next(); //telling the function that its done & to move to next function
+});
+*/
+
+//if move this under .get, it will not execute as the response has already been sent
+/** 
+app.use((req,res,next)=>{
+    console.log('in the next middleware');
+    next(); //telling the function that its done & to move to next function
+});
+*/
+
+//middleware & static files(css/images)
+app.use(express.static('public'));
+
+//morgan example
+//https://www.npmjs.com/package/morgan
+app.use(morgan('dev'));
 
 //path to listen to
 app.get('/',(req,res)=>{
@@ -46,6 +73,6 @@ app.get('/about-us',(req,res)=>{
 // will only run this if cant find on top
 app.use((req,res)=>{
     // res.status(404).sendFile('./views/404.html',{ root: __dirname});
-    res.render('404',{title: '404'});
+    res.status(404).render('404',{title: '404'});
 
 });
