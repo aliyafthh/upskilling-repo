@@ -1,12 +1,14 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const authRoutes = require('./routes/authRoute');
+const cookieParser = require('cookie-parser');
 
 const app = express();
 
 // middleware
 app.use(express.static('public'));
 app.use(express.json());
+app.use(cookieParser());
 
 // view engine
 app.set('view engine', 'ejs');
@@ -21,3 +23,27 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true, useCr
 app.get('/', (req, res) => res.render('home'));
 app.get('/smoothies', (req, res) => res.render('smoothies'));
 app.use(authRoutes);
+
+//cookies
+app.get('/set-cookies',(req,res)=>{
+  //manual method
+  // res.setHeader('Set-Cookie', 'newUser=true');
+
+  //middleware method
+  res.cookie('newUser',false);
+  //maxAge -> how long a cookie will last (default is per session = close browser will delete
+  //secure -> will only set cookie on https
+  // httpOnly -> cannot access from FE (console in web)
+  res.cookie('isEmployee',true, { maxAge: 1000 * 60 * 60 * 24, httpOnly: true}); 
+  res.send('you got cookies!');
+});
+
+app.get('/read-cookies',(req,res)=>{
+
+  //cookies can be accessed from all urls once already set
+  const cookies = req.cookies;
+  console.log(cookies);
+
+  res.json(cookies);
+
+});
