@@ -4,16 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="styles.css" rel="stylesheet" />
+  <!-- <link href="styles.css" rel="stylesheet" /> -->
+  <link href="styles2.css" rel="stylesheet" />
+
   <title>Razer Gold</title>
   <link rel="icon" href="./assets/razer gold coin.png" type="image/icon type">
   <script src="https://kit.fontawesome.com/2ad2a6f639.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 </head>
 
 <body>
-  <div id="page-wrapper">
-    <header id="header">
+    <header id="header" class="nav">
       <div>
         <img id="header-img" src="./assets/header-logo.png" alt="razer gold logo" />
       </div>
@@ -31,8 +31,8 @@
 
         <i class="fa-solid fa-magnifying-glass search-icon"></i>
         <div class="dropdown">
-          <button onclick="myFunction()" class="dropbtn"><span onclick="myFunction()"><i
-                class="fa-solid fa-globe"></i>ENGLISH <i class="fa-solid fa-chevron-down"></i></span></button>
+          <button onclick="myFunction()" class="dropbtn"><span onclick="myFunction()">        <img src="./assets/icons/language.png" alt="globe" />
+            ENGLISH <i class="fa-solid fa-chevron-down"></i></span></button>
           <div id="myDropdown" class="dropdown-content">
             <a href="#">MALAY</a>
             <a href="#">CHINESE</a>
@@ -45,22 +45,22 @@
 
     <div class="container"></div>
 
-    <section id="hero">
-      <div>
-        <div>
-          <div>
-            <div><h1>Razer Gold - The Largest Monetization Network for Games and Entertainment contents</h1>
+    <section id="content">
+      <div class="banner">
+        <div class="main-banner">
+          <div class="main-banner-content">
+            <div class="main-banner-text"><h1>Razer Gold - The Largest Monetization Network for Games and Entertainment contents</h1>
               <p>With 60,000 + onboarded gaming and entertainment contents, and integrated with major global and local payment partners, gamers leverage Razer Gold to purchase games, in-game items, earn Razer Silver rewards, and unlock exclusive game deals. 
-
-                Be a part of Razer Gold’s Partner Program today.</p>
+                </p>
+                <p>Be a part of Razer Gold’s Partner Program today.</p>
                 <button class="join-us-btn">Join us now</button>
 
             </div>
-            <div>
-              <img src="./assets/gold-silver-coins-1.png">
+            <div class="main-banner-image">
+              <img src="./assets/gold-silver-coin.png">
             </div>
           </div>
-          <div>
+          <div class="pagination">
             <a href=""><img src='./assets/pagination-coloured.png' alt="page"></a>
             <a href=""><img src='./assets/pagination.png' alt="page"></a>
             <a href=""><img src='./assets/pagination.png' alt="page"></a>
@@ -71,31 +71,31 @@
             <a href=""><img src='./assets/pagination.png' alt="page"></a>
           </div>
         </div>
-        <div>
-          <div>
+        <div class="sub-banner">
+          <div class="sub-banner-item">
             <h3>60,100</h3>
             <p>Games & Entertainment Content</p>
           </div>
-          <div>
-            <p>|</p>
+          <div class="sub-banner-item">
+            <hr>
           </div>
-          <div>
+          <div class="sub-banner-item">
             <h3>6.1 M</h3>
             <p>Offline Channels &
               Touchpoints</p>
           </div>
-          <div>
-            <p>|</p>
+          <div class="sub-banner-item">
+            <hr>
           </div>
-          <div>
+          <div class="sub-banner-item">
             <h3>201</h3>
             <p>Global Payment Methods
             </p>
           </div>
-          <div>
-            <p>|</p>
+          <div class="sub-banner-item">
+            <hr>
           </div>
-          <div>
+          <div class="sub-banner-item">
             <h3>28</h3>
             <p>Local Currencies</p>
           </div>
@@ -103,69 +103,62 @@
       </div>
     </section>
 
-    <div class="container">
-      <section>
-        <div class="banner-background">
+    <section id="payment">
+      <h1>why razer gold?</h1>
+      <div class="why-content">
+        <div class="why-content-item">
+          <img src="./assets/icons/card-check.png" alt="card-check">
+          <div>
+            <h4>UNIFYING PAYMENTS FOR
+              EMERGING MARKETS</h4>
+            <p>Providing a revitalized payment ecosystem for gamers in emerging markets to monetize games,
+              applications, and content.</p>
+          </div>
         </div>
-        <div style="z-index: 10;">
-          <section id="why-section">
-            <h1>why razer gold</h1>
-            <div class="why-content">
-              <div class="product" id="tenor">
-                <img src="./assets/icons/card-check.png" alt="card-check">
-                <div>
-                  <h4>UNIFYING PAYMENTS FOR
-                    EMERGING MARKETS</h4>
-                  <p>Providing a revitalized payment ecosystem for gamers in emerging markets to monetize games,
-                    applications, and content.</p>
-                </div>
-              </div>
-              <div class="product" id="tenor">
-                <img src="./assets/icons/chargeback-protection.png" alt="chargeback">
-                <div>
-                  <h4>CHARGEBACK PROTECTION</h4>
-                  <p>Integrate with our 100% fraud and chargeback protection to stay competitive with our
-                    self-optimizing fraud management solution.</p>
-                </div>
-              </div>
-              <div class="product" id="tenor">
-                <img src="./assets/icons/fast-pay.png" alt="fast-pay">
-                <div>
-                  <h4>AVAILABLE ONLINE & 6M+ OFFLINE TOUCHPOINTS</h4>
-                  <p>With an abundance of global touchpoints, localized payment methods and an exclusive insight into
-                    the industry’s top publishers, experience Razer Gold’s integrated payment solution suite, built
-                    FOR GAMERS. BY GAMERS. ™</p>
-                </div>
-              </div>
-              <div class="product" id="tenor">
-                <img src="./assets/icons/management.png" alt="management">
-                <div>
-                  <h4>MARKETING SUPPORT</h4>
-                  <p>Harness our complete range of marketing capabilities to provide your
-                    games with momentous recognition they deserve.</p>
-                </div>
-              </div>
-              <div class="product" id="tenor">
-                <img src="./assets/icons/partners.png" alt="partners">
-                <div>
-                  <h4>CO-BRANDED PHILOSOPHY</h4>
-                  <p>Razer Gold seizes all opportunities to collaborate in co-branded promotions and events with
-                    partners/game merchants.</p>
-                </div>
-              </div>
-              <div class="product" id="tenor">
-                <img src="./assets/icons/api.png" alt="api">
-                <div>
-                  <h4>Ease of Integration</h4>
-                  <p>Enjoy an end-to end single API connection system connecting you to an entire payment stack for
-                    users to seamlessly checkout with Razer Gold.</p>
-                </div>
-              </div>
+        <div class="why-content-item">
+          <img src="./assets/icons/chargeback-protection.png" alt="chargeback">
+          <div>
+            <h4>CHARGEBACK PROTECTION</h4>
+            <p>Integrate with our 100% fraud and chargeback protection to stay competitive with our
+              self-optimizing fraud management solution.</p>
+          </div>
+        </div>
+        <div class="why-content-item">
+          <img src="./assets/icons/fast-pay.png" alt="fast-pay">
+          <div>
+            <h4>AVAILABLE ONLINE & 6M+ OFFLINE TOUCHPOINTS</h4>
+            <p>With an abundance of global touchpoints, localized payment methods and an exclusive insight into
+              the industry’s top publishers, experience Razer Gold’s integrated payment solution suite, built
+              FOR GAMERS. BY GAMERS. ™</p>
+          </div>
+        </div>
+        <div class="why-content-item">
+          <img src="./assets/icons/management.png" alt="management">
+          <div>
+            <h4>MARKETING SUPPORT</h4>
+            <p>Harness our complete range of marketing capabilities to provide your
+              games with momentous recognition they deserve.</p>
+          </div>
+        </div>
+        <div class="why-content-item">
+          <img src="./assets/icons/partners.png" alt="partners">
+          <div>
+            <h4>CO-BRANDED PHILOSOPHY</h4>
+            <p>Razer Gold seizes all opportunities to collaborate in co-branded promotions and events with
+              partners/game merchants.</p>
+          </div>
+        </div>
+        <div class="why-content-item">
+          <img src="./assets/icons/api.png" alt="api">
+          <div>
+            <h4>Ease of Integration</h4>
+            <p>Enjoy an end-to end single API connection system connecting you to an entire payment stack for
+              users to seamlessly checkout with Razer Gold.</p>
+          </div>
+        </div>
 
-            </div>
-          </section>
-        </div>
-      </section>
+      </div>
+    </section>
       <section id="partner">
         <h1>Partner with razer gold</h1>
         <div>
@@ -229,7 +222,7 @@
           </div>
         </div>
       </section>
-      <section>
+      <!-- <section>
         <h1>Articles</h1>
         <div>
           <div>
@@ -365,77 +358,6 @@
           </div>
         </div>
       </section>
-      <!-- <section id="pricing">
-          <div class="product" id="tenor">
-            <div class="level">Tenor Trombone</div>
-            <h2>$600</h2>
-            <ol>
-              <li>Lorem ipsum.</li>
-              <li>Lorem ipsum.</li>
-              <li>Lorem ipsum dolor.</li>
-              <li>Lorem ipsum.</li>
-            </ol>
-            <button class="btn">Select</button>
-          </div>
-          <div class="product" id="bass">
-            <div class="level">Bass Trombone</div>
-            <h2>$900</h2>
-            <ol>
-              <li>Lorem ipsum.</li>
-              <li>Lorem ipsum.</li>
-              <li>Lorem ipsum dolor.</li>
-              <li>Lorem ipsum.</li>
-            </ol>
-            <button class="btn">Select</button>
-          </div>
-          <div class="product" id="valve">
-            <div class="level">Valve Trombone</div>
-            <h2>$1200</h2>
-            <ol>
-              <li>Plays similar to a Trumpet</li>
-              <li>Great for Jazz Bands</li>
-              <li>Lorem ipsum dolor.</li>
-              <li>Lorem ipsum.</li>
-            </ol>
-            <button class="btn">Select</button>
-          </div>
-        </section> -->
-      <!-- <section id="features">
-          <div class="grid">
-            <div class="icon"><i class="fa fa-3x fa-fire"></i></div>
-            <div class="desc">
-              <h2>Premium Materials</h2>
-              <p>
-                Our trombones use the shiniest brass which is sourced locally.
-                This will increase the longevity of your purchase.
-              </p>
-            </div>
-          </div>
-          <div class="grid">
-            <div class="icon"><i class="fa fa-3x fa-truck"></i></div>
-            <div class="desc">
-              <h2>Fast Shipping</h2>
-              <p>
-                We make sure you recieve your trombone as soon as we have
-                finished making it. We also provide free returns if you are not
-                satisfied.
-              </p>
-            </div>
-          </div>
-          <div class="grid">
-            <div class="icon">
-              <i class="fa fa-3x fa-battery-full" aria-hidden="true"></i>
-            </div>
-            <div class="desc">
-              <h2>Quality Assurance</h2>
-              <p>
-                For every purchase you make, we will ensure there are no damages
-                or faults and we will check and test the pitch of your
-                instrument.
-              </p>
-            </div>
-          </div>
-        </section> -->
       <section>
         <div class="footer-banner">
           <img src="./assets/gold-silver-coins-1.png">
@@ -444,7 +366,7 @@
             <button class="join-us-btn">Join us now</button>
           </div>
         </div>
-      </section>
+      </section> -->
       <footer>
         <div class="social-medias">
           <h6>FOR GAMERS. BY GAMERS. ™</h6>
@@ -511,8 +433,6 @@
 
         </div>
       </footer>
-    </div>
-  </div>
 
   <script>
     /* When the user clicks on the button, 
