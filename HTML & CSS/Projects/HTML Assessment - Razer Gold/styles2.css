@@ -165,6 +165,11 @@
     nav > ul {
       flex-direction: column;
     }
+
+    .main-banner{
+      display: flex;
+      flex-direction: row !important;
+    }
   }
 
   .header-content {
@@ -525,6 +530,121 @@ button {
     padding-top: 5rem;
 }
 
+/* fourth section */
+
+#feedback{
+  margin-top: 5rem;
+  padding-top: 5rem;
+  background-image: url(./assets/quote-background.png);
+  background-size:     cover;                      
+  background-repeat:   no-repeat;
+  background-position: center center; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.feedback-quote {
+  display: flex;
+  flex-direction: row;
+  margin:  4rem 12rem;
+  gap: 8rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.feedback-quote img{
+  height: 8rem;
+  width: 8rem;
+}
+
+.rating {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.rating img{
+  height: 3rem;
+  width: 3rem;
+}
+
+.quote-icon{
+position: absolute;
+width: 3rem !important;
+height: 3rem !important;
+left: 110rem;
+top: 13rem;
+}
+
+
+.feedback-quote-box{
+  border: 1px solid var(--primary-razer-white);
+  padding: 4rem;
+  margin: 0 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  text-align: center;
+}
+
+/* fifth section */
+#region{
+  margin-top: 5rem;
+  padding-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 5rem;
+}
+
+.flags{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+#companies {
+  margin-top: 5rem;
+  padding: 5rem 0;
+  background-image: url(./assets/companies-background.png);
+  background-size:     cover;                      
+  background-repeat:   no-repeat;
+  background-position: center center; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.companies-logos{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+  margin: 10rem 20rem;
+}
+
+.companies-logos img{
+  display: block;
+  max-width:200px;
+  max-height:80px;
+  width: auto;
+  height: auto;
+}
 
 /* Footer */
 .footer-nav {
@@ -585,9 +705,15 @@ footer hr {
     height: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: flex-start;
     gap: 20px;
     padding: 20px;
+}
+
+.footer-banner img{
+  width: 30rem;
+  height: 15rem;
 }
 
 
@@ -596,4 +722,9 @@ footer hr {
     flex-direction: column;
     gap: 20px;
     flex-wrap: wrap;
+    width: 40%;
+}
+
+.footer-banner h1{
+  text-align: left !important;
 }
