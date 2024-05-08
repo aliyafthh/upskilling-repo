@@ -1,4 +1,3 @@
-
 :root {
   --primary-razer-green: #44D62C;
   --primary-razer-black: #101010;
@@ -17,6 +16,13 @@
   font-family: Roboto, sans-serif;
 }
 
+/* Shared Styles */
+.page {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--primary-razer-black);
+}
+
 .wrapper {
   margin-right: auto;
   margin-left: auto;
@@ -29,33 +35,187 @@
   overflow: hidden;
 }
 
-.page {
+.flex-column {
   display: flex;
-  flex-wrap: wrap;
-  background-color: var(--primary-razer-black);
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 2rem;
 }
 
-.section {
-  width: 100%;
-  height: auto;
+.flex-row {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  padding: 2vh;
 }
 
-.menu {
-  background-color: #5995DA;
-  height: 80px;
+.image {
+  width: 100%;
+  display: block;
 }
 
-.header {
-  background-color: #B2D6FF;
+hr {
+  margin: 20px 0;
+  border-color: 2px solid var(--primary-razer-medium-light-grey);
+  width: 100%;
 }
 
-.sign-up {
-  background-color: #D6E9FE;
+.join-us-btn {
+  color: var(--primary-razer-black);
+  font-weight: 800;
+  font-style: normal;
+  line-height: 16px;
+  text-align: center;
+  border: none;
+  background-color: var(--primary-razer-green);
+  text-transform: uppercase;
+  border-radius: 2px;
+  padding: 8px 25px;
+  font-size: 14px;
+  margin-top: 2rem;
 }
+
+.learn-more-btn {
+  font-family: Roboto, sans-serif;
+  color: var(--primary-razer-green);
+  text-align: center;
+  border: none;
+  text-transform: uppercase;
+  background-color: transparent;
+}
+
+.title {
+  color: var(--primary-razer-green);
+  font-family: RazerF5;
+  font-size: 32px;
+  font-weight: 700;
+  padding-bottom: 5px;
+}
+
+.subtitle {
+  color: var(--primary-razer-medium-light-grey);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.grid-content {
+  padding-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-razer-medium-grey);
+}
+
+a:hover {
+  color: var(--primary-razer-green);
+  cursor: pointer;
+}
+
+.view-more-btn {
+  font-family: Roboto, sans-serif;
+  color: var(--primary-razer-green);
+  font-weight: 500;
+  font-style: normal;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 2px;
+  padding: 8px 20px;
+  font-size: 14px;
+  border: 1px solid var(--primary-razer-green);
+  background-color: transparent;
+  display: block;
+  margin: 2rem auto 0 auto;
+}
+
+.wrapper input {
+  display: none;
+}
+
+.center-align {
+  align-items: center;
+}
+
+.bottom-border {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--primary-razer-medium-grey);
+}
+
+
+/* Font styling */
+
+@font-face {
+  font-family: RazerF5;
+  src: url(fonts/razerf5-semibold.otf);
+}
+
+/* Roboto Regular */
+@font-face {
+  font-family: "Roboto";
+  src: url('fonts/Roboto/Roboto-Light.ttf');
+  src: url('fonts/Roboto/Roboto-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* Roboto Medium */
+/* @font-face {
+  font-family: "Roboto";
+  src: url('fonts/Roboto/Roboto-Medium.ttf');
+  src: url('fonts/Roboto/Roboto-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+} */
+
+h2 {
+  color: var(--primary-razer-white);
+  font-family: RazerF5;
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.4rem;
+  text-transform: uppercase;
+}
+
+h3 {
+  color: var(--primary-razer-green);
+  font-family: RazerF5;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  text-align: center;
+  padding-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+h5 {
+  color: var(--primary-razer-white);
+  font-family: RazerF5;
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  text-transform: uppercase;
+}
+
+p {
+  color: var(--primary-razer-white);
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+
+h6 {
+  font-family: RazerF5;
+  color: var(--primary-razer-green)
+}
+
+.grey {
+  color: var(--primary-razer-grey)
+}
+
 
 /* Top Navigation Bar */
 .nav {
@@ -107,8 +267,6 @@
   display: none;
 }
 
-/* Top Navigation Bar */
-
 /* Main banner */
 
 .banner {
@@ -122,21 +280,6 @@
   height: 600px;
 }
 
-.flex-column { 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  gap: 2rem;
-}
-
-.flex-row { 
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  /* gap: 2rem; */
-  align-items: center;
-}
-
 .banner-text {
   text-align: left;
   display: flex;
@@ -146,13 +289,23 @@
   gap: 2vh;
 }
 
-/* Main banner */
-
-
-.image {
+.sub-banner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 3vh;
+  column-gap: 2vh;
+  align-items: unset;
   width: 100%;
-  display: block;
 }
+
+.sub-banner-item hr {
+  background-color: var(--primary-razer-medium-grey);
+  -webkit-transform: rotate(90deg);
+  width: 4rem;
+  height: 2px;
+  border: 1px;
+}
+
 
 /* Pagination */
 
@@ -177,38 +330,13 @@ blockquote {
   color: var(--primary-razer-medium-light-grey)
 }
 
-/* Pagination */
-
 /* Footer */
 
-.footer-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding-bottom: 10px;
-}
-
-hr {
-  margin: 20px 0;
-  border-color: 2px solid var(--primary-razer-medium-light-grey);
-  width: 100%;
-}
-
-.footer-nav-item {
-  padding-top: 8rem;
-}
-
-.footer-nav-item li {
-  padding-top: 10px;
-}
-
-.footer-nav-item :last-of-type {
-  padding-right: 2rem;
-}
 
 .footer-bottom-text {
   color: var(--primary-razer-white);
   font-size: 0.5rem;
+  padding-top: 1rem;
 }
 
 .footer-bottom-nav {
@@ -224,13 +352,6 @@ hr {
   font-size: 0.7rem;
 }
 
-.social-medias {
-  padding-top: 3rem;
-  color: var(--primary-razer-green);
-  font-size: 18px;
-  font-family: RazerF5;
-}
-
 .social-medias-icons {
   padding-top: 10px;
   display: flex;
@@ -241,131 +362,6 @@ hr {
 .social-medias-icons img {
   height: 2rem;
   width: 2rem;
-}
-
-h6{
-  font-family: RazerF5;
-  color: var(--primary-razer-green)
-}
-
-
-/* Font styles */
-
-@font-face {
-  font-family: RazerF5;
-  src: url(fonts/razerf5-semibold.otf);
-}
-
- /* Roboto Regular */
-@font-face {
-  font-family: "Roboto";
-  src: url('fonts/Roboto/Roboto-Light.ttf');
-  src: url('fonts/Roboto/Roboto-Light.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-
-/* Roboto Medium */
-/* @font-face {
-  font-family: "Roboto";
-  src: url('fonts/Roboto/Roboto-Medium.ttf');
-  src: url('fonts/Roboto/Roboto-Medium.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-} */
-
-
-h3 {
-  color: var(--primary-razer-green);
-  font-family: RazerF5;
-  font-weight: 600;
-  font-size: 1.5rem;
-  line-height: 1.8rem;
-  text-align: center;
-  padding-bottom: 2rem;
-  text-transform: uppercase;
-}
-
-h5 {
-  color: var(--primary-razer-white);
-  font-family: RazerF5;
-  font-weight: 600;
-  font-size: 1.2rem;
-  line-height: 1.4rem;
-  text-transform: uppercase;
-}
-
-p {
-  color: var(--primary-razer-white);
-  font-weight: 400;
-  font-size: 0.8rem;
-}
-
-/* Font styles */
-
-
-.join-us-btn {
-  color: var(--primary-razer-black);
-  font-weight: 800;
-  font-style: normal;
-  line-height: 16px;
-  text-align: center;
-  border: none;
-  background-color: var(--primary-razer-green);
-  text-transform: uppercase;
-  border-radius: 2px;
-  padding: 8px 25px;
-  font-size: 14px;
-  margin-top: 2rem;
-}
-
-.learn-more-btn {
-  font-family: Roboto, sans-serif;
-  color: var(--primary-razer-green);
-  text-align: center;
-  border: none;
-  text-transform: uppercase;
-  background-color: transparent;
-}
-
-
-.sub-banner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  row-gap: 3vh;
-  column-gap: 2vh;
-  align-items: unset;
-  width: 100%;
-}
-
-.title {
-  color: var(--primary-razer-green);
-  font-family: RazerF5;
-  font-size: 32px;
-  font-weight: 700;
-  padding-bottom: 5px;
-}
-
-.subtitle {
-  color: var(--primary-razer-medium-light-grey);
-  font-size: 14px;
-  font-weight: 400;
-}
-
-.sub-banner-item hr {
-  background-color: var(--primary-razer-medium-grey);
-  -webkit-transform: rotate(90deg);
-  width: 4rem;
-  height: 2px;
-  border: 1px;
-}
-
-.grid-content {
-  padding-top: 2rem;
-  display: grid;
-  grid-template-columns: 1fr;
-  row-gap: 2rem;
 }
 
 .why-content {
@@ -456,19 +452,9 @@ p {
   padding-bottom: 4rem;
 }
 
-.products-details-items-content img{
+.products-details-items-content img {
   display: block;
   max-width: 40%;
-}
-
-a {
-  text-decoration: none;
-  color: var(--primary-razer-medium-grey);
-}
-
-a:hover {
-  color: var(--primary-razer-green);
-  cursor: pointer;
 }
 
 .article-content {
@@ -487,23 +473,6 @@ a:hover {
   gap: 1rem;
   align-items: flex-start;
   padding: 2rem 1rem 2rem 1rem;
-}
-
-.view-more-btn {
-  font-family: Roboto, sans-serif;
-  color: var(--primary-razer-green);
-  font-weight: 500;
-  font-style: normal;
-  line-height: 16px;
-  text-align: center;
-  text-transform: uppercase;
-  border-radius: 2px;
-  padding: 8px 20px;
-  font-size: 14px;
-  border: 1px solid var(--primary-razer-green);
-  background-color: transparent;
-  display: block;
-  margin:2rem auto 0 auto;
 }
 
 .rating {
@@ -537,14 +506,14 @@ a:hover {
 .flags-bg {
   padding-top: 4rem;
   width: 100%;
-  height:auto;
+  height: auto;
 }
 
-figure img{
+figure img {
   display: block;
   width: 5rem;
   height: auto;
-  padding:  0 0.5rem 0.3rem 0.5rem;
+  padding: 0 0.5rem 0.3rem 0.5rem;
 }
 
 figcaption {
@@ -552,7 +521,7 @@ figcaption {
   text-transform: uppercase;
   text-align: center;
   font-family: RazerF5;
-  font-size:14px;
+  font-size: 14px;
 }
 
 .company-logo {
@@ -567,58 +536,74 @@ figcaption {
   background-position: center center;
 }
 
-/* Footer */
 
-.wrapper input {
+/* Footer toggle styling */
+.fa-minus {
   display: none;
 }
 
-#toggle-check-1:not(:checked)~.flex-column .link-content-1 {
+#toggle-check-1:not(:checked)~.flex-column .link-content-1,
+#toggle-check-1:not(:checked)~.flex-column .minus-icon-1,
+#toggle-check-1:checked~.flex-column .plus-icon-1,
+#toggle-check-2:not(:checked)~.flex-column .link-content-2,
+#toggle-check-2:not(:checked)~.flex-column .minus-icon-2,
+#toggle-check-2:checked~.flex-column .plus-icon-2,
+#toggle-check-3:not(:checked)~.flex-column .link-content-3,
+#toggle-check-3:not(:checked)~.flex-column .minus-icon-3,
+#toggle-check-3:checked~.flex-column .plus-icon-3,
+#toggle-check-4:not(:checked)~.flex-column .link-content-4,
+#toggle-check-4:not(:checked)~.flex-column .minus-icon-4,
+#toggle-check-4:checked~.flex-column .plus-icon-4 {
   display: none;
-
 }
 
-#toggle-check-1:checked~.flex-column .link-content-1 {
+#toggle-check-1:checked~.flex-column .link-content-1,
+#toggle-check-1:checked~.flex-column .minus-icon-1,
+#toggle-check-1:not(:checked)~.flex-column .plus-icon-1,
+#toggle-check-2:checked~.flex-column .link-content-2,
+#toggle-check-2:checked~.flex-column .minus-icon-2,
+#toggle-check-2:not(:checked)~.flex-column .plus-icon-2,
+#toggle-check-3:checked~.flex-column .link-content-3,
+#toggle-check-3:checked~.flex-column .minus-icon-3,
+#toggle-check-3:not(:checked)~.flex-column .plus-icon-3,
+#toggle-check-4:checked~.flex-column .link-content-4,
+#toggle-check-4:checked~.flex-column .minus-icon-4,
+#toggle-check-4:not(:checked)~.flex-column .plus-icon-4 {
   display: block;
-
 }
 
-#toggle-check-2:not(:checked)~.flex-column .link-content-2 {
-  display: none;
-
-}
-
-#toggle-check-2:checked~.flex-column .link-content-2 {
-  display: block;
-
-}
-
-#toggle-check-3:not(:checked)~.flex-column .link-content-3 {
-  display: none;
-
-}
-
-#toggle-check-3:checked~.flex-column .link-content-3 {
-  display: block;
-
-}
-
-#toggle-check-4:not(:checked)~.flex-column .link-content-4 {
-  display: none;
-
-}
-
-#toggle-check-4:checked~.flex-column .link-content-4 {
-  display: block;
-
-}
+[class^="link-content"] li {
+  padding: 0.5rem 0;
+ }
 
 /* Radial background */
 
 .radial {
-  background-image:radial-gradient(circle 20vh at 50% 1%, rgba(253, 229, 110, 0.5) 0%, rgba(177, 126, 37, 0.5) 33.33%, rgba(32, 21, 3, 0) 100%);
+  background-image: radial-gradient(circle 20vh at 50% 1%, rgba(253, 229, 110, 0.5) 0%, rgba(177, 126, 37, 0.5) 33.33%, rgba(32, 21, 3, 0) 100%);
   background-size: 100% 15%;
   background-repeat: no-repeat;
+}
+
+.gradient {
+  background: linear-gradient(180deg, #252525 0%, #101010 100%);
+}
+
+.divider-image {
+  background-image: url(images/backgrounds/article-mob-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 20rem;
+  width: 100%;
+}
+
+.partner-image {
+  background-image: url(images/backgrounds/partners-mob-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  /* height: 20rem;
+  width: 100%; */
 }
 
 /* Mobile Styles */
