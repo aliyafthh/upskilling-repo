@@ -606,6 +606,24 @@ figcaption {
   width: 100%; */
 }
 
+.search-bar{
+  background-color: var(--primary-razer-dark-grey);
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  padding: 1rem;
+  margin: 1rem;
+  gap: 1rem;
+  color: var(--primary-razer-medium-grey);
+  align-items: center;
+  font-size: 1rem;
+}
+
+.search-bar input {
+  border: none;
+  background-color: transparent;
+}
+
 /* Mobile Styles */
 
 @media (max-width:960px) {
@@ -638,7 +656,7 @@ figcaption {
   .nav>.nav-links {
     position: absolute;
     width: 100%;
-    background-color: #333;
+    background-color: var(--primary-razer-black);
     height: 0px;
     transition: all 0.3s ease-in;
     overflow-y: hidden;
