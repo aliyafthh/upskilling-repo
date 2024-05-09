@@ -27,10 +27,7 @@
   margin-right: auto;
   margin-left: auto;
   max-width: 1160px;
-  padding-top: 50px;
-  padding-right: 20px;
-  padding-left: 20px;
-  padding-bottom: 10px;
+  padding: 50px 20px;
   background-color: var(--primary-razer-black);
   overflow: hidden;
 }
@@ -60,7 +57,7 @@ hr {
   width: 100%;
 }
 
-.join-us-btn {
+.btn {
   color: var(--primary-razer-black);
   font-weight: 800;
   font-style: normal;
@@ -75,7 +72,7 @@ hr {
   margin-top: 2rem;
 }
 
-.learn-more-btn {
+.transparent-btn {
   font-family: Roboto, sans-serif;
   color: var(--primary-razer-green);
   text-align: center;
@@ -115,7 +112,7 @@ a:hover {
   cursor: pointer;
 }
 
-.view-more-btn {
+.outline-btn {
   font-family: Roboto, sans-serif;
   color: var(--primary-razer-green);
   font-weight: 500;
@@ -219,7 +216,6 @@ h6 {
 
 /* Top Navigation Bar */
 .nav {
-  /* height: 50px; */
   width: 100%;
   background-color: var(--primary-razer-black);
   position: fixed;
@@ -301,7 +297,7 @@ h6 {
 .sub-banner-item hr {
   background-color: var(--primary-razer-medium-grey);
   -webkit-transform: rotate(90deg);
-  width: 4rem;
+  width: 2rem;
   height: 2px;
   border: 1px;
 }
@@ -324,10 +320,6 @@ h6 {
 
 .pagination a:hover {
   background-color: var(--primary-razer-green);
-}
-
-blockquote {
-  color: var(--primary-razer-medium-light-grey)
 }
 
 /* Footer */
@@ -364,13 +356,6 @@ blockquote {
   width: 2rem;
 }
 
-.why-content {
-  display: grid;
-  grid-template-columns: 1fr;
-  column-gap: 5rem;
-  row-gap: 5rem;
-  margin: 10rem;
-}
 
 .why-content-item {
   display: flex;
@@ -383,9 +368,7 @@ blockquote {
   display: block;
 }
 
-
-/* Third section */
-.partner-tabs {
+.tabs {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -394,11 +377,11 @@ blockquote {
   margin-bottom: 1.5rem;
 }
 
-.partner-tabs a:hover {
+.tabs a:hover {
   border-bottom: 2px solid var(--primary-razer-green);
 }
 
-.partner-tabs a {
+.tabs a {
   padding: 0 1.5rem;
   text-transform: uppercase;
   flex-wrap: nowrap;
@@ -524,6 +507,10 @@ figcaption {
   font-size: 14px;
 }
 
+blockquote {
+  color: var(--primary-razer-medium-light-grey)
+}
+
 .company-logo {
   width: 30%;
   display: block;
@@ -574,9 +561,9 @@ figcaption {
 
 [class^="link-content"] li {
   padding: 0.5rem 0;
- }
+}
 
-/* Radial background */
+/*  Background */
 
 .radial {
   background-image: radial-gradient(circle 20vh at 50% 1%, rgba(253, 229, 110, 0.5) 0%, rgba(177, 126, 37, 0.5) 33.33%, rgba(32, 21, 3, 0) 100%);
@@ -601,12 +588,17 @@ figcaption {
   background-image: url(images/backgrounds/partners-mob-bg.png);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
-  /* height: 20rem;
-  width: 100%; */
+  background-position: top center;
 }
 
-.search-bar{
+.coin-bg {
+  background-image: radial-gradient(circle 30vh at 50% 100%, rgba(253, 229, 110, 0.5) 0%, rgba(177, 126, 37, 0.5) 33.33%, rgba(32, 21, 3, 0) 100%),
+    url(images/backgrounds/coin-bg-mob.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.search-bar {
   background-color: var(--primary-razer-dark-grey);
   display: flex;
   flex-direction: row;
@@ -685,16 +677,17 @@ figcaption {
     background-color: #F09A9D;
     /* Red */
   }
+
+  .web {
+    display: none;
+  }
 }
 
 /* Tablet Styles */
 @media only screen and (min-width: 401px) and (max-width: 960px) {
 
-  .sign-up,
-  .feature-1,
-  .feature-2,
-  .feature-3 {
-    width: 50%;
+  .web {
+    display: none;
   }
 
 }
@@ -706,26 +699,165 @@ figcaption {
     margin: 0 auto;
   }
 
-  .feature-1,
-  .feature-2,
-  .feature-3 {
-    width: 33.3%;
-  }
-
-  .header {
-    height: 400px;
-  }
-
-  .sign-up {
-    height: 200px;
-    order: 1;
-  }
-
-  .content {
-    order: 2;
-  }
-
   .banner {
     background-image: url(images/banner-image-large.jpg);
   }
+
+  .mobile {
+    display: none;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+    float: none !important;
+  }
+
+  .nav-links a {
+    padding: 0 0.5rem;
+  }
+
+  .banner-text h3 {
+    text-align: left;
+  }
+
+  .pagination a {
+    height: 0.2vw;
+    width: 4vw;
+    margin: 0.5vw;
+  }
+
+  .pagination {
+    margin: 0 auto;
+  }
+
+  .sub-banner {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+  }
+
+  .radial {
+    background-image: radial-gradient(circle 40vh at 50% 1%, rgba(253, 229, 110, 0.5) 0%, rgba(177, 126, 37, 0.5) 33.33%, rgba(32, 21, 3, 0) 100%);
+  }
+
+  .grid-content {
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 2rem;
+    column-gap: 2rem;
+  }
+
+  .why-content-item {
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+
+  .flex-column {
+    align-items: center;
+  }
+
+  .partner-banner {
+    width: 50%;
+    float: left;
+  }
+
+  .gradient {
+    background-image: url(images/backgrounds/article-web-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+  }
+
+  .tabs {
+    overflow-y: hidden;
+  }
+
+  .products-details {
+    overflow-y: hidden;
+  }
+
+  .flags {
+    overflow-y: hidden;
+  }
+
+  .company-logo {
+    width: 200px;
+    display: block;
+    text-align: center;
+  }
+
+  .handshake {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+    background-image:
+      linear-gradient(-270deg, #000000 10%, rgba(0, 0, 0, 0)),
+      url('images/backgrounds/handshake-bg-web.png');
+    height: 300px;
+  }
+
+  .handshake img {
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .handshake h2 {
+    flex-wrap: wrap;
+    line-height: 2rem;
+  }
+
+  h6 {
+    text-align: right;
+  }
+
+  .social-medias {
+    float: right;
+  }
+
+
+
+  .footer-nav {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 10px;
+    gap: 1rem;
+    float: left;
+  }
+
+
+  footer hr {
+    margin: 20px 0;
+    border-color: var(--primary-razer-medium-grey);
+  }
+
+  .footer-nav-item {
+    padding-top: 2rem;
+  }
+
+  .footer-nav-item li {
+    padding-top: 10px;
+  }
+
+  .coin-bg {
+    background-image: radial-gradient(circle 30vh at 50% 100%, rgba(253, 229, 110, 0.5) 0%, rgba(177, 126, 37, 0.5) 33.33%, rgba(32, 21, 3, 0) 100%),
+      url(images/backgrounds/coin-bg-web.jpg);
+    padding-bottom: 10rem;
+  }
+
+
 }
