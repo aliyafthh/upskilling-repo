@@ -8,7 +8,7 @@ class MyBottomNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GNav(
-      onTabChange: (value)=> onTabChange,
+      onTabChange: (value) => onTabChange!(value),
       padding: EdgeInsets.all(25.0),
       mainAxisAlignment: MainAxisAlignment.center,
       activeColor: Colors.white,
