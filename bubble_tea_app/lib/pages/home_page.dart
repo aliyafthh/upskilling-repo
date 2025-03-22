@@ -29,7 +29,7 @@ final List<Widget> _pages = [
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.brown,
+      backgroundColor: Colors.brown[200],
       bottomNavigationBar: MyBottomNavBar(onTabChange: (index)=> navigateBottomBar(index),),
       body: _pages[_selectedIndex],
     );
