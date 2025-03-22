@@ -15,7 +15,7 @@ class ShopPage extends StatefulWidget {
 class _ShopPageState extends State<ShopPage> {
   void goToOrderPage(Drink drink) {
     Navigator.push(
-        context, MaterialPageRoute(builder: (context) => OrderPage()));
+        context, MaterialPageRoute(builder: (context) => OrderPage(drink: drink,)));
   }
 
   @override
