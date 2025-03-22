@@ -1,5 +1,7 @@
+import 'package:bubble_tea_app/components/drink_tile.dart';
 import 'package:bubble_tea_app/models/drink.dart';
 import 'package:bubble_tea_app/models/shop.dart';
+import 'package:bubble_tea_app/pages/order_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -11,6 +13,11 @@ class ShopPage extends StatefulWidget {
 }
 
 class _ShopPageState extends State<ShopPage> {
+  void goToOrderPage(Drink drink) {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => OrderPage()));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Consumer<BubbleTeaShop>(
@@ -28,12 +35,13 @@ class _ShopPageState extends State<ShopPage> {
             //list of drinks for sale
             Expanded(
                 child: ListView.builder(
-                  itemCount: value.shop.length,
+              itemCount: value.shop.length,
               itemBuilder: (context, index) {
                 Drink individualDrink = value.shop[index];
-                return ListTile(
-                title: Text(individualDrink.name),subtitle: Text(individualDrink.price),
-              );
+                return DrinkTile(
+                  drink: individualDrink,
+                  onTap: () => goToOrderPage(individualDrink),
+                );
               },
             ))
           ],

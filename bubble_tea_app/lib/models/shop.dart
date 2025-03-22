@@ -5,13 +5,11 @@ class BubbleTeaShop extends ChangeNotifier {
 
   //list of drinks for sale
   final List<Drink> _shop = [
-    Drink(name:"Pearl Milk Tea",price: "4.00", imagePath: "lib/images/milk-tea.png")
+    Drink(name:"Pearl Milk Tea",price: "4.00", imagePath: "lib/images/milk-tea.jpg")
   ];
 
   //list of drinks in users cart
-    final List<Drink> _userCart = [
-    Drink(name:"Pearl Milk Tea",price: "4.00", imagePath: "lib/images/milk-tea.png")
-  ];
+    final List<Drink> _userCart = [];
 
   //get drinks for sale
    List<Drink> get shop => _shop;
